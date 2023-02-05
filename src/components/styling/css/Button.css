@@ -1,0 +1,13 @@
+button {
+  width: 100%;
+  height: 3.3125rem;
+  background-color: #21092F;
+  color: white;
+  border: 1px solid transparent;
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  border-radius: 0.5rem;
+}/*# sourceMappingURL=Button.css.map */

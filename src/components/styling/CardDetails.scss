@@ -1,0 +1,55 @@
+
+.CardDetails{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 20.4375rem;
+    margin: 0 1.5rem 0 1.5rem;
+    form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    label{
+        font-size: 0.75rem;
+        line-height: 0.9375rem;
+        letter-spacing: 0.125rem;
+        text-transform: uppercase;
+        margin-bottom: 0.5625rem;
+    }
+
+    .row{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .col{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    input{
+        padding: 1rem 0.5rem;
+        background: #FFFFFF;
+        border: 1px solid #DFDEE0;
+        border-radius: 8px;
+        margin-bottom: 1.25rem;
+    }
+    .holder-name, .card-number{
+        min-width: 20.4375rem;
+    }
+    .exp-month, .exp-year{
+        text-align: center;
+        max-width: 4.5rem;
+        margin-right: 0.5rem;
+    }
+    .cvc{
+        text-align: center;
+        width: 10.25rem;
+    }
+}

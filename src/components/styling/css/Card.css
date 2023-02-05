@@ -1,0 +1,82 @@
+.Card {
+  width: 100%;
+  min-height: 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  perspective: 1000px;
+}
+.Card .Flipped {
+  transform: rotateY(180deg);
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+.Card .Unflipper {
+  transform: rotateY(0deg);
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+.Card .FrontFlipped {
+  opacity: 0;
+  -webkit-animation: flip1 steps(1) 0.8s;
+          animation: flip1 steps(1) 0.8s;
+}
+.Card .BackFlipped {
+  opacity: 1;
+  -webkit-animation: flip2 steps(1) 0.8s;
+          animation: flip2 steps(1) 0.8s;
+}
+
+@-webkit-keyframes flip1 {
+  0% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0.05;
+  }
+  40% {
+    opacity: 0;
+  }
+}
+
+@keyframes flip1 {
+  0% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0.05;
+  }
+  40% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes flip2 {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.95;
+  }
+  40% {
+    opacity: 1;
+  }
+}
+@keyframes flip2 {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.95;
+  }
+  40% {
+    opacity: 1;
+  }
+}
+@media screen and (min-width: 800px) {
+  .Card {
+    max-width: 483px;
+    height: 100%;
+  }
+}/*# sourceMappingURL=Card.css.map */

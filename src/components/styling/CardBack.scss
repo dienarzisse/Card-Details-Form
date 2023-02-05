@@ -1,0 +1,23 @@
+
+.CardBack{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 0.5625rem;
+    line-height: 0.6875rem;
+    text-align: right;
+    letter-spacing: 0.0804rem;
+    text-transform: uppercase;
+    width: 17.875rem;
+    height: 9.8125rem;
+    border-radius: 1rem;
+    z-index: 0;
+    .cvc{
+        position: absolute;
+        top: 4.5rem;
+        left: 2.3125rem;
+        transform: rotateY(180deg);
+    }
+}

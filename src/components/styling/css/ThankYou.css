@@ -1,0 +1,30 @@
+.ThankYou {
+  min-width: 20.4375rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.ThankYou img {
+  width: 5rem;
+  margin-bottom: 2.1875rem;
+}
+.ThankYou h1 {
+  color: #21092F;
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 36px;
+  margin-bottom: 1rem;
+}
+.ThankYou p {
+  color: #8F8694;
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  text-align: center;
+  margin-bottom: 3rem;
+}/*# sourceMappingURL=ThankYou.css.map */

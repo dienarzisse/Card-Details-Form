@@ -1,23 +1,44 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+import Card from './components/Card';
+import CardDetails from './components/CardDetailsForm';
+import ThankYou from './components/ThankYou';
 
 function App() {
+  const [flipped, setFlipped] = useState(false);
+  const [completed, setCompleted] = useState(false);
+  const [cardNumber, setCardNumber] = useState("");
+  const[cardHolder, setCardHolder] = useState("");
+  const[expMonth, setExpMonth] = useState("");
+  const[expYear, setExpYear] = useState("");
+  const[cvc, setcvc] = useState("");
+
+  // event handlers
+  const handleComplete = () =>{
+    setCompleted(true);
+  }
+
+  const handleFlip = (isFlipped) =>{
+    setFlipped(isFlipped);
+  }
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     
+        <Card CardNumber={ cardNumber } CardHolder={ cardHolder } ExpMonth={ expMonth } ExpYear={ expYear } CVC={ cvc } Flipped={ flipped } setFlipped={ setFlipped }/>
+      
+      <div className="FormWrapper">
+       {!completed && <CardDetails handleComplete={ handleComplete } handleFlip={ handleFlip }
+        cardHolder={ cardHolder } setCardHolder={ setCardHolder } 
+        cardNumber={ cardNumber } setCardNumber={ setCardNumber }
+        expMonth={ expMonth } setExpMonth={ setExpMonth }
+        expYear={ expYear } setExpYear={ setExpYear }
+        cvc={ cvc } setCVC={ setcvc }
+        completed={ completed } setCompleted={ setCompleted }
+        /> }
+        { completed && <ThankYou />}
+      </div>
     </div>
   );
 }
