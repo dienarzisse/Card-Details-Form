@@ -61,19 +61,19 @@ function CardDetails({handleFlip, cardHolder, cardNumber,
         <div className="CardDetails">
             <form>
                 <div className="col">
-                    <label for="cname">Name on Card</label>
+                    <label htmlFor="cname">Name on Card</label>
                     <input className="holder-name" value={ cardHolder } onChange={ handleNameChange }
                     type="text" id="cname" name="cardname" placeholder="John More Doe"></input>
                 </div>
                 <div className="col">
-                <label for="ccnum">Credit card number</label>
+                <label htmlFor="ccnum">Credit card number</label>
                 <input className="card-number" value={ cardNumber } onChange={ handleNumberChange }
                 type="text" id="ccnum" name="cardnumber" placeholder="DE1111-2222-3333-4444"></input>
                 </div>
                                
-                <div class="row">
-                    <div class="col">
-                        <label for="expyear">Exp Date(MM/YY)</label>
+                <div className="row">
+                    <div className="col">
+                        <label htmlFor="expyear">Exp Date(MM/YY)</label>
                         <div className="row">
                         <input className="exp-month" value={ expMonth } onChange={ handleMonthChange }
                         type="number" min="1" max="12" id="expmonth" name="expmonth" placeholder="07"></input>
@@ -81,8 +81,8 @@ function CardDetails({handleFlip, cardHolder, cardNumber,
                         type="text" min="0" max="99" id="expyear" name="expyear" placeholder="24"></input>
                         </div>
                     </div>
-                    <div class="col">
-                        <label for="cvv">CVC</label>
+                    <div className="col">
+                        <label htmlFor="cvv">CVC</label>
                         <input className="cvc" value={ cvc } onChange={ handleCVCChange }
                         onFocus={() => handleFlip(true)} onBlur={() => handleFlip(false)} type="text" id="cvv" name="cvv" placeholder="352"></input>
                     </div>
